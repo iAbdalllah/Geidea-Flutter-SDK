@@ -7,6 +7,7 @@ class ServerEnvironment {
       ServerEnvironmentModel.UAE_PREPROD(),
       ServerEnvironmentModel.KSA_PROD(),
       ServerEnvironmentModel.KSA_PREPROD(),
+      ServerEnvironmentModel.Abdullah(),
     ];
   }
 }
@@ -29,6 +30,8 @@ class ServerEnvironmentModel {
   factory ServerEnvironmentModel.KSA_PROD() = _KSA_PROD;
 
   factory ServerEnvironmentModel.KSA_PREPROD() = _KSA_PREPROD;
+
+  factory ServerEnvironmentModel.Abdullah() = _Abdullah;
 }
 
 class _EGY_PROD extends ServerEnvironmentModel {
@@ -65,4 +68,10 @@ class _KSA_PREPROD extends ServerEnvironmentModel {
   _KSA_PREPROD()
       : super('KSA-PREPROD', 'https://api-ksamerchant.staging.geidea.net',
             'https://www.gd-pprod-infra.net/hpp/checkout/?');
+}
+
+class _Abdullah extends ServerEnvironmentModel {
+  _Abdullah()
+      : super('Abdullah', 'https://www.ksamerchant.geidea.net/hpp/geideaCheckout.min.js',
+            'https://www.ksamerchant.geidea.net/hpp/geideaCheckout.min.js');
 }
